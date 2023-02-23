@@ -1,0 +1,37 @@
+{
+    "Intro" : {
+        "answer" : [
+                "Hello",
+                "Hi there",
+                "Greetings",
+                "Good morning",
+                "Good afternoon",
+                "Good evening",
+                "Hey",
+                "Hey there",
+                "Hi",
+                "Hiya",
+                "Howdy",
+                "Salutations",
+                "What's up",
+                "Yo",
+                "Hi-ya",
+                "Hi-ho",
+                "Hi-de-ho",
+                "Well, hello there",
+                "Nice to see you",
+                "Pleased to meet you",
+                "Hello friend",
+                "Hi friend",
+                "Hey friend",
+                "What's new",
+                "How are you",
+                "What's happening",
+                "Sup",
+                "How's it going",
+                "Top of the morning to you"
+            ]
+            
+    },
+    "Questions" : {}
+}
