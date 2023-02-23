@@ -25,7 +25,7 @@
                 "Hi friend",
                 "Hey friend",
                 "What's new",
-                "How are you",
+                
                 "What's happening",
                 "Sup",
                 "How's it going",
@@ -33,5 +33,21 @@
             ]
             
     },
-    "Questions" : {}
+    "Questions" : {
+        "answer":[
+            "How are you",
+            "How are you doing?",
+            "How are you feeling?",
+            "How's your day going?",
+            "What's the status report?",
+            "What's new with you?",
+            "How have you been?",
+            "How's your state of mind?",
+            "What's happening with you?",
+            "How's your energy level?",
+            "How's life treating you?"
+        ]
+    }
+
+    
 }

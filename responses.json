@@ -22,5 +22,20 @@
         "Hello, how are things going?",
         "Hi, how are you feeling today?"
         ]
+    },
+    "Questions" : {
+        "answer":[
+            "I'm like a pizza, hot and ready to go!",
+            "I'm doing so well, I feel like I could take over the world...or at least the internet!",
+            "I'm so good, I feel like I could bench press a server farm!",
+            "I'm doing great, thanks for asking! I feel like a robot in a flower garden.",
+            "I'm fabulous, like a unicorn eating cotton candy on a rainbow!",
+            "I'm feeling so good, it's like I just won the lottery! But in reality, I'm just a chatbot.",
+            "I'm doing awesome, thanks for asking! I feel like I could write an entire book on the history of memes.",
+            "I'm doing great, thanks for asking! I feel like a corny joke that everyone secretly loves.",
+            "I'm doing fantastic, like a bot out of hell!",
+            "I'm doing well, thanks for asking! I feel like a chatbot with a sense of humor, which is pretty rare, if you ask me."
+        ]
     }
+
 }
