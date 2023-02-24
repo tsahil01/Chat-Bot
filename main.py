@@ -1,7 +1,12 @@
 import json
 import random
+import datetime
 # from textblob import TextBlob
 
+#--------------------------------
+curr_d = datetime.datetime.now().strftime("%d-%m-%Y")
+curr_t = datetime.datetime.now().strftime("%H:%M:%S")
+# -------------------------------
 
 
 bot_responses = open ("responses.json")  
@@ -10,11 +15,8 @@ bot_data = json.load(bot_responses)
 user_responses = open ("user_input.json")  
 user_data = json.load(user_responses)
 
-trainer = open ("trainer.json")  
+trainer = open ("trainer2.json")  
 trainer_data = json.load(trainer)
-
-
-
 
 #----------------Function------------------>>>>
 
@@ -23,14 +25,17 @@ def bot_answer_fun(answer):
     trainer_fn(user_que,answer)
     
 def trainer_fn(que,ans):
-    trainer_data["user"][f"{que}"] = f"{ans}"
-    trainer = open('trainer.json', 'w') 
+    trainer_data["name"]["que_ans"].append({"que":f"{que} [{curr_d},{curr_t}]", "ans": ans})
     json.dump(trainer_data, trainer)
 
+def remember_fn(x):
+    trainer_data["name"]["remember"].append({f"[{curr_d},{curr_t}]": x})
+    json.dump(trainer_data, trainer)
 #<<<<------------------------------------------
 
 #----------------------------------------------
 while True:
+    trainer = open('trainer2.json', 'w') 
     user_greet = (_.title() for _ in user_data["Intro"]["answer"])
     bot_greet = random.choice(bot_data["Intro"]["answer"])
 
@@ -47,12 +52,11 @@ while True:
     elif(user_que in user_question):
         bot_answer_fun(bot_question)
 
-    elif("Remember" in user_que.split()):
+    elif("Remember" in user_que.split()[0]):
         x = (user_que.split())[1:]
-        x = ", ".join(x)
-        print(x)
+        x = " ".join(x)
+        remember_fn(x)
             
-    
     else:
         bot_answer_fun("I did'nt get that. Can you say it again?")
 
