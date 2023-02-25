@@ -1,7 +1,10 @@
 import json
 import random
 import datetime
-# from textblob import TextBlob
+from textblob import TextBlob
+import wikipedia
+
+
 
 #--------------------------------
 curr_d = datetime.datetime.now().strftime("%d-%m-%Y")
@@ -56,9 +59,16 @@ while True:
         x = (user_que.split())[1:]
         x = " ".join(x)
         remember_fn(x)
+
+    elif("Wiki-" in user_que.split()[0]):
+        x = (user_que.split())[1:]
+        x = " ".join(x)
+        results = wikipedia.search(x) 
+        bot_answer_fun(f"{wikipedia.page(results[0]).summary}")
+        
             
     else:
-        bot_answer_fun("I did'nt get that. Can you say it again?")
+        bot_answer_fun("I didn't get that. Can you say it again?")
 
 
 
